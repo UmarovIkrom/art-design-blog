@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Quicksand);
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+button{
+    font-family: inherit;
+    transition: all 0.3s ease-in-out;
+ }
+
+body{
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+    /*Header section styles*/
+
+header{
+    height: 100vh;
+    background: linear-gradient(#00000066, #00000066);
+    background-image: url(./images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}    
+
+.navbar{
+    background: #00000099;
+    padding: 1.2rem;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation .logo a{
+    color: #fff;
+    font-size: 2rem;
+    display: block;
+    text-decoration: none;
+    font-family: var(--Playfair);
+    letter-spacing: 5px;
+}
+
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+}
+
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--roboto);
+    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    transition: opacity 0.5s ease;
+}
+
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+
+    /*Banner styles*/
+
+.banner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 9%;
+}
+
+.banner-title{
+    font-size: 5rem;
+    font-family: var(--playfair);
+    line-height: 1.2;
+}
+
+.banner-title span{
+    font-family: var(--Playfair);
+    color: var(--exDark);
+}
+
+.banner p{
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: var(--Roboto);
+    font-weight: 300;
+    word-spacing: 2px;
+}
+
+.banner form{
+    background: #fff;
+    border-radius: 2rem;
+    display: flex;
+    padding: 0.6rem 1rem;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search-input{
+    font-family: var(--Roboto);
+    font-size: 1.2rem;
+    outline: none;
+    padding: 0.6rem 0;
+    border: none;
+}
+
+.search-input::placeholder{
+    text-transform: capitalize;
+}
+
+.search-button{
+    width: 40px;
+    font-size: 1.2rem;
+    border: none;
+    color: var(--dark);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+    /*End of Header section styles*/
+
+    /*Main section styles*/
+
+.design{
+    padding: 4.5rem 0;
+}    
+
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.title h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+.design-content{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* gap tagi → bu ikkita rasimmi orasi bu kodda*/
+}
+
+.design-item{
+    cursor: pointer;
+    margin: 0;
+}
+
+.design-img{
+    position: relative;
+    overflow: hidden;
+}
+
+.design-img::after{ /*bu kod rasmni ranggini qoraytirish uchun iwlatiladi*/
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000004d;
+}
+
+.design-img img{
+    transition: all .5s ease;
+}
+
+.design-item:hover img{
+    transform: scale(1.2);
+}
+
+.design-img span:first-of-type{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--dark);
+    padding: 0.25rem 1rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.design-img span:last-of-type{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1;
+    z-index: 1;
+}
+
+.design-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.design-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}   /*End of Design section styling*/
+
+    /*Blog section styles*/
+
+.blog{
+    padding: 4.5rem 0;
+    background: #f9f9f9;
+}    
+
+.blog-content{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr/*225px*/);
+    gap: 2rem; /* gap tagi → bu ikkita rasimmi orasi bu kodda*/
+}
+
+.blog-img{
+    position: relative;
+}
+
+.blog-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--dark);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+
+.blog-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: .5rem;
+}
+
+.blog-text h2{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+
+.blog-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+
+.blog-text a{
+    font-family: var(--Roboto);
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--dark);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    background: var(--dark);   
+    transition: all 0.5s;
+}
+
+.blog-text a:hover{
+    background: var(--exDark);
+}   /*End of Blog Section styles*/
+
+    /*About me section styles*/
+.about-section{
+    padding: 4.5rem 0;
+}    
+
+.about-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    align-items: center;
+}
+
+.about-text{
+    margin: rem 0;
+    text-align: center;
+}
+
+.about-text p{
+    font-size: 1.1rem;
+    padding: .6rem 0;
+    opacity: .94;
+}
+.about-title p{
+    opacity: 1;
+    font-family: var(--Playfair);
+}
+.about-title h2{
+    font-family: var(--Playfair);
+    font-weight: bold;
+}   /*End of about me section*/
+
+    /*Footer section styles*/
+
+footer{
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+}  
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}    
+
+.social-links a{
+    border: 2px solid #fff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 .3rem;
+    transition: all .4s ease;
+}
+
+.social-links a:hover{
+    background-color: #fff;
+    color: var(--exDark);
+}
+
+.footer-span{
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);    
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+}
+
+
+
+/* WebSitemizani Responsive ko'rinishga keltirish */
+
+
+.navbar-nav i{
+    display: none;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .navbar-nav a{
+        display: none;
+    }
+
+    .navbar-nav i{
+        display: block;
+        color: #fff;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .navbar-nav i:hover{
+        opacity: 0.7;
+    }
+
+    .banner-title{
+        font-size: 3.5rem; /* 1rem=16px*/
+        padding-bottom: 1.5rem;
+    }
+
+    .design-content{
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .blog-content{
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem 0;
+    }
+
+    .about-content{
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+    }   
+
+    footer .navbar-nav
+}
+
